@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surfboard Select - Results</title>
+    <script src="https://kit.fontawesome.com/683b726a0b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+{% include "navbar.html.jinja" %}
+    
+<section class="banner-intro">
+    <h1>Some Magic Surfboards For You</h1>
+</section>
+
+{% for surfboard in results %}
+<p>{{surfboard["model_name"]}}</p>
+{% endfor %}
+{# <section class="results-table"></section>
+<tr>
+    <td></td>
+    <td></td>
+    <td>Wave Size Range</td>
+    <td>Wave Type</td>
+    <td>Break Type</td>
+    <td>Skill Level</td>
+    <td></td>
+    <td></td>
+    
+
+</tr>
+</section> #}
+{% include "footer.html.jinja" %}
+</body>
+</html>

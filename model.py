@@ -4,7 +4,7 @@ from psycopg2.extras import DictCursor
 
 def connect():
     conn = psycopg2.connect("dbname=surfboard_db")
-    cur = conn.cursor()
+    cur = conn.cursor(cursor_factory=DictCursor)
     return conn, cur
 
 

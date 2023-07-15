@@ -4,8 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Surfboard Select - Home</title>
+    <script src="https://kit.fontawesome.com/683b726a0b.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    
     {% include "navbar.html.jinja"%}
+
+    <section class="banner-intro">
+    <h1>Welcome to the surfboard selector!
+    The first website that helps you to choose your next magic board
+    </h1>
+    </section>
+
+    <section class="banner-img">
+    <img src="https://media.istockphoto.com/id/1224626501/photo/browsing-the-surfboards.jpg?s=1024x1024&w=is&k=20&c=7A2ldvH4ZXQ3kBMU4BOtKZDP4ujMzL9OShYfppBP_8w=" alt="surfer selecting a surfboard">
+    </section>
+
+    <section class="form">
+    <p>Submit the form to discover surfboards</p>
+    <form action="/select_surfboard" method="GET">
+    <section class="wave-characteristics">
+    <p>Wave Characteristics You Want to Surf</p>
+    <label for="min_wave_size" id="min_wave_size">Min wave feet?</label>
+    <input type="number" name="min_wave_size">
+
+    <label for="max_wave_size" id="max_wave_size">And the max feet?</label>
+    <input type="number" name="max_wave_size">
+
+    <label for="wave_type" id="wave_type">What's the type of the wave?</label>
+    <select id="wave_type" name="wave_type">
+      <option value="">...</option>
+      <option value="mushy">Mushy - Full - Weak</option>
+      <option value="daily">Everyday Condition</option>
+      <option value="power">Powerful Waves</option>
+      <option value="big wave">Big Waves</option>
+    </select>
+
+    <label for="break_type">What's the break?</label>
+    <select name="break_type" id="break_type">
+      <option value="">...</option>
+      <option value="beach">Beach break</option>
+      <option value="point">Point break</option>
+      <option value="reef">Reef - Slabs</option>
+      <option value="all">All Breaks</option>
+    </select>
+    </section>
+
+    <section class="skills">
+    <p>Your Surfing Skills</p>
+    <label for="skill_level">What's your skill level?</label>
+    <select name="skill_level" id="skill_level">
+    <option value="">...</option>
+    <option value="beginner">Beginner / Low Experienced</option>
+    <option value="intermediate">Intermediate</option>
+    <option value="expert">Expert</option>
+    </select>
+    </section>
+
+    <button>Find my magic board!</button>
+    </form>
+    </section>
+
+    {% include "footer.html.jinja" %}
   </body>
+
 </html>
