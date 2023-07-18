@@ -6,6 +6,27 @@
     <title>The Surfboard Selector - Login</title>
 </head>
 <body>
-    <p>login!</p>
+     <h1>Login</h1>
+    <form action="/login_action" method="POST">
+    
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flash-messages">
+      {% for message in messages %}
+        <li class="flash-message">{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <button>Login</button>
+    </form>
+    <a href="/register">Register here</a>
 </body>
 </html>

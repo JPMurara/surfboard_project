@@ -2,5 +2,22 @@
 <ul>
 <a href="/">Home</a>
 <a href="/about">About</a>
+{% if session.user and session.user.is_admin == True %}
+    <a href="/add">Add New Surfboard</a>
+{% endif %}
 </ul>
 </header>
+
+{% if session.user %}
+    <p>Logged in as {{session.user.name}}</p>
+    <form action="/logout" method="POST">
+    <button>Logout</button>
+    </form>
+{% else %}
+    <a href="/login">Shaper Login</a>
+{% endif %}
+
+
+
+
+

@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS shapers (
     id serial PRIMARY KEY,
     shaper_name TEXT NOT NULL,
     email TEXT NOT NULL UNIQUE,
-    url TEXT NOT NULL,
+    shaper_url TEXT NOT NULL,
     is_admin BOOLEAN,
     password_hash TEXT NOT NULL
 );
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS surfboards (
     skill_level TEXT NOT NULL,
     img_single TEXT NOT NULL,
     img_detail TEXT NOT NULL,
-    url TEXT NOT NULL,
+    surfboard_url TEXT NOT NULL,
     CONSTRAINT fk_shapers
         FOREIGN KEY (shaper_id)
         REFERENCES shapers(id)
