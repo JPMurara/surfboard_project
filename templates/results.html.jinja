@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surfboard Select - Results</title>
+    <title>The Surfboard Selector - Results</title>
     <script src="https://kit.fontawesome.com/683b726a0b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -13,23 +13,31 @@
     <h1>Some Magic Surfboards For You</h1>
 </section>
 
-{% for surfboard in results %}
-<p>{{surfboard["model_name"]}}</p>
-{% endfor %}
-{# <section class="results-table"></section>
-<tr>
-    <td></td>
-    <td></td>
-    <td>Wave Size Range</td>
-    <td>Wave Type</td>
-    <td>Break Type</td>
-    <td>Skill Level</td>
-    <td></td>
-    <td></td>
-    
+<div>Model</div>
+<div>Board Type</div>
+<div>Wave Range</div>
+<div>Wave Type</div>
+<div>Break Type</div>
+<div>Skill Level</div>
 
-</tr>
-</section> #}
+{% for surfboard in results %}
+<div>{{surfboard.model_name}}</div>
+<div>{{surfboard.model_type}}</div>
+<div>
+  {{ surfboard.min_wave_size }} to {{ surfboard.max_wave_size }}
+</div>
+<div>{{surfboard.wave_type}}</div>
+<div>{{surfboard.break_type}}</div>
+<div>{{surfboard.skill_level}}</div>
+<img src="{{surfboard.img_single}}" alt="">
+<img src="{{surfboard.img_detail}}" alt="">
+<a href="{{surfboard.url}}">More details</a>
+<button class="btn-remove">Remove</button>
+{% endfor %}
+<a href="/">Go back</a>
+
+
+
 {% include "footer.html.jinja" %}
 </body>
 </html>
