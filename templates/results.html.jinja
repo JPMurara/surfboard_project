@@ -20,24 +20,28 @@
 <div>Break Type</div>
 <div>Skill Level</div>
 
-{% for surfboard in results %}
-<div>{{surfboard.model_name}}</div>
-<div>{{surfboard.model_type}}</div>
-<div>
-  {{ surfboard.min_wave_size }} to {{ surfboard.max_wave_size }}
-</div>
-<div>{{surfboard.wave_type}}</div>
-<div>{{surfboard.break_type}}</div>
-<div>{{surfboard.skill_level}}</div>
-<img src="{{surfboard.img_single}}" alt="">
-<img src="{{surfboard.img_detail}}" alt="">
-<a href="{{surfboard.url}}">More details</a>
-<button class="btn-remove">Remove</button>
+{% for surfboard in surfboard_results %}
+<section class="surfboard-container">
+  <div>{{surfboard.shaper_name}}</div>
+  <div>{{surfboard.model_name}}</div>
+  <div>{{surfboard.model_type}}</div>
+  <div>
+    {{ surfboard.min_wave_size }} to {{ surfboard.max_wave_size }}
+  </div>
+  <div>{{surfboard.wave_type}}</div>
+  <div>{{surfboard.break_type}}</div>
+  <div>{{surfboard.skill_level}}</div>
+  <img src="{{surfboard.img_single}}" alt="">
+  <img src="{{surfboard.img_detail}}" alt="">
+  <a href="{{surfboard.url}}" target="_blank">More details</a>
+  <button class="btn-remove">Remove</button>
+</section>
 {% endfor %}
 <a href="/">Go back</a>
 
 
 
 {% include "footer.html.jinja" %}
+<script src="../static/script.js"></script>
 </body>
 </html>

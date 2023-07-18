@@ -28,6 +28,15 @@ def insert(sql_file):
         conn.commit()
 
 
+def insert_shaper(shaper_name, email, url, stored_password):
+    conn, cur = connect()
+    query = "INSERT INTO shapers (shaper_name, email, url, password_hash) VALUES (%s, %s, %s, %s)"
+    data = (shaper_name, email, url, stored_password)
+    cur.execute(query, data)
+    conn.commit()
+    close(conn, cur)
+
+
 if __name__ == "__main__":
     # executes these func only when we can call the file directly: python3 model.py. Not when its imported as a module
     conn, cur = connect()

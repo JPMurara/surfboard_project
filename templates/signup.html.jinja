@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Sign Up Page</title>
+</head>
+<body>
+    <h1>Admin Sign Up Page</h1>
+    <p>If you are a shaper and want to add your surfboard to our database, please submit the form</p>
+    
+    <form action="/signup_action" method="POST">
+    <label for="shaper-name">First name</label>
+    <input type="text" name="shaper-name" id="shaper-name">
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email">
+
+    <label for="url">Company Website</label>
+    <input type="text" name="url" id="url">
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
+
+    <label for="confirm-password">Password</label>
+    <input type="password" name="confirm-password" id="confirm-password">
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flash-messages">
+      {% for message in messages %}
+        <li class="flash-message">{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <button>Register</button>
+</form>
+
+
+</body>
+</html>
