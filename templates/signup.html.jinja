@@ -9,33 +9,35 @@
     <h1>Admin Sign Up Page</h1>
     <p>If you are a shaper and want to add your surfboard to our database, please submit the form</p>
     
-    <form action="/signup_action" method="POST">
-    <label for="shaper-name">First name</label>
-    <input type="text" name="shaper-name" id="shaper-name">
+    <form action="/register_action" method="POST">
+    <label for="shaper-name">Company Name</label>
+    <input type="text" name="shaper-name" id="shaper-name" required>
 
     <label for="email">Email</label>
-    <input type="email" name="email" id="email">
+    <input type="email" name="email" id="email" required>
 
     <label for="url">Company Website</label>
-    <input type="text" name="url" id="url">
+    <input type="text" name="url" id="url" required>
 
     <label for="password">Password</label>
-    <input type="password" name="password" id="password">
+    <input type="password" name="password" id="password" required>
 
-    <label for="confirm-password">Password</label>
-    <input type="password" name="confirm-password" id="confirm-password">
+    <label for="confirm-password">Confirm Password</label>
+    <input type="password" name="confirm-password" id="confirm-password" required>
 
     {% with messages = get_flashed_messages() %}
     {% if messages %}
-    <ul class="flash-messages">
+    <div class="flash-messages">
       {% for message in messages %}
-        <li class="flash-message">{{ message }}</li>
+        <p class="flash-message">{{ message }}</p>
       {% endfor %}
-    </ul>
+    </div>
     {% endif %}
     {% endwith %}
 
     <button>Register</button>
+
+    <div class="message-container"></div>
 </form>
 
 

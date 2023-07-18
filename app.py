@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, flash, redirect, url_for
+from flask import Flask, render_template, request, flash, redirect
 import os
 import psycopg2
 from model import connect, close, insert_shaper
@@ -58,6 +58,7 @@ def register_action():
     url = request.form.get("url")
     password = request.form.get("password")
     confirm_password = request.form.get("confirm-password")
+    print("--------", shaper_name)
     if password == confirm_password:
         binary_password = bcrypt.hashpw(password.encode(), bcrypt.gensalt())
         # binary password is binary, need to be a string to store in the DB
@@ -67,7 +68,7 @@ def register_action():
         return redirect("/login")
     else:
         flash("Passwords don't match. Please try again.", "error")
-        return redirect("/signup")
+        return redirect("/register")
 
 
 @app.route("/login")
