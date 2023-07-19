@@ -1,36 +1,36 @@
--- INSERT INTO stores (store_name, url, post_code) VALUES (
---     'The Surfboard Warehouse', 
---     'https://www.thesurfboardwarehouse.com.au/',
---     4567
--- ),
--- (
---     'Surfboard Empire',
---     'http://www.surfboardempire.com.au/',
---     4575
--- ),
--- (
---     'Beach Beat - Alex Heads',
---     'https://beachbeat.com.au/',
---     4572
+INSERT INTO stores (store_name, url, post_code) VALUES (
+    'The Surfboard Warehouse', 
+    'https://www.thesurfboardwarehouse.com.au/',
+    4567
+),
+(
+    'Surfboard Empire',
+    'http://www.surfboardempire.com.au/',
+    4575
+),
+(
+    'Beach Beat - Alex Heads',
+    'https://beachbeat.com.au/',
+    4572
 
--- ),
--- (
---     'Beach Beat - Coolum',
---     'https://beachbeat.com.au/',
---     4573
+),
+(
+    'Beach Beat - Coolum',
+    'https://beachbeat.com.au/',
+    4573
 
--- ),
--- (
---     'Beach Beat - Caloundra',
---     'https://beachbeat.com.au/',
---     4551
+),
+(
+    'Beach Beat - Caloundra',
+    'https://beachbeat.com.au/',
+    4551
 
--- ),
--- (
---     'Sideways Noosa',
---     'https://sideways.com.au/',
---     4567
--- );
+),
+(
+    'Sideways Noosa',
+    'https://sideways.com.au/',
+    4567
+);
 
 -- INSERT INTO shapers (shaper_name, email, url, is_admin, password_hash) VALUES 
 -- (

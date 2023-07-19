@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Surfboard Selector - Home</title>
-    <script src="https://kit.fontawesome.com/683b726a0b.js" crossorigin="anonymous"></script>
+    {% include "css-link.html.jinja" %}
   </head>
   <body>
     
@@ -16,9 +16,19 @@
     </h1>
     </section>
 
-    <section class="banner-img">
-    <img src="https://media.istockphoto.com/id/1224626501/photo/browsing-the-surfboards.jpg?s=1024x1024&w=is&k=20&c=7A2ldvH4ZXQ3kBMU4BOtKZDP4ujMzL9OShYfppBP_8w=" alt="surfer selecting a surfboard">
-    </section>
+    {# <section class="banner-img">
+    <img src="../img/jonjon.avif" alt="">
+    <img src="https://shop-au.cisurfboards.com/cdn/shop/files/first-pass-trucker-hat-shaping-bay-2400x180_180x.jpg?v=1626394567%20180w%20135h,//shop-au.cisurfboards.com/cdn/shop/files/first-pass-trucker-hat-shaping-bay-2400x180_360x.jpg?v=1626394567%20360w%20270h,//shop-au.cisurfboards.com/cdn/shop/files/first-pass-trucker-hat-shaping-bay-2400x180_540x.jpg?v=1626394567%20540w%20405h,//shop-au.cisurfboards.com/cdn/shop/files/first-pass-trucker-hat-shaping-bay-2400x180_720x.jpg?v=1626394567%20720w%20540h,//shop-au.cisurfboards.com/cdn/shop/files/first-pass-trucker-hat-shaping-bay-2400x180_900x.jpg?v=1626394567%20900w%20675h,//shop-au.cisurfboards.com/cdn/shop/files/first-pass-trucker-hat-shaping-bay-2400x180_1080x.jpg?v=1626394567%201080w%20810h,//shop-au.cisurfboards.com/cdn/shop/files/first-pass-trucker-hat-shaping-bay-2400x180_1296x.jpg?v=1626394567%201296w%20972h,//shop-au.cisurfboards.com/cdn/shop/files/first-pass-trucker-hat-shaping-bay-2400x180_1512x.jpg?v=1626394567%201512w%201134h,//shop-au.cisurfboards.com/cdn/shop/files/first-pass-trucker-hat-shaping-bay-2400x180_1728x.jpg?v=1626394567%201728w%201296h,//shop-au.cisurfboards.com/cdn/shop/files/first-pass-trucker-hat-shaping-bay-2400x180_1944x.jpg?v=1626394567%201944w%201458h,//shop-au.cisurfboards.com/cdn/shop/files/first-pass-trucker-hat-shaping-bay-2400x180_2160x.jpg?v=1626394567%202160w%201620h,//shop-au.cisurfboards.com/cdn/shop/files/first-pass-trucker-hat-shaping-bay-2400x180_2376x.jpg?v=1626394567%202376w%201782h,//shop-au.cisurfboards.com/cdn/shop/files/first-pass-trucker-hat-shaping-bay-2400x180_2400x.jpg?v=1626394567%202400w%201800h" alt="">
+    <img src="//shop-au.cisurfboards.com/cdn/shop/files/dane-Youtube-cover_180x.jpg?v=1626394567 180w 101h,//shop-au.cisurfboards.com/cdn/shop/files/dane-Youtube-cover_360x.jpg?v=1626394567 360w 203h,//shop-au.cisurfboards.com/cdn/shop/files/dane-Youtube-cover_540x.jpg?v=1626394567 540w 304h,//shop-au.cisurfboards.com/cdn/shop/files/dane-Youtube-cover_720x.jpg?v=1626394567 720w 405h,//shop-au.cisurfboards.com/cdn/shop/files/dane-Youtube-cover_900x.jpg?v=1626394567 900w 506h,//shop-au.cisurfboards.com/cdn/shop/files/dane-Youtube-cover_1080x.jpg?v=1626394567 1080w 608h,//shop-au.cisurfboards.com/cdn/shop/files/dane-Youtube-cover_1296x.jpg?v=1626394567 1296w 729h,//shop-au.cisurfboards.com/cdn/shop/files/dane-Youtube-cover_1512x.jpg?v=1626394567 1512w 851h,//shop-au.cisurfboards.com/cdn/shop/files/dane-Youtube-cover_1728x.jpg?v=1626394567 1728w 972h,//shop-au.cisurfboards.com/cdn/shop/files/dane-Youtube-cover_1920x.jpg?v=1626394567 1920w 1080h"" alt="">
+    </section> #}
+
+  <section>
+    <div class="carousel">
+      <img class="slide slide1" src="https://images.unsplash.com/photo-1621433213916-fde39d28e016?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHN1cmZib2FyZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+      <img class="slide slide2" src="https://images.unsplash.com/photo-1513569143478-b38b2c0ef97f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3VyZnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+      <img class="slide slide3" src="https://images.unsplash.com/photo-1505459668311-8dfac7952bf0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHN1cmZ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="">
+    </div>
+</section>
 
     <section class="form">
     <p>Submit the form to discover surfboards</p>
@@ -66,6 +76,8 @@
     </section>
 
     {% include "footer.html.jinja" %}
+
+    <script src="../static/script.js"></script>
   </body>
 
 </html>

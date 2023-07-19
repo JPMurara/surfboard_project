@@ -25,7 +25,10 @@ def select_surfboard():
         min_wave_size, max_wave_size, wave_type, break_type, skill_level
     )
 
-    return render_template("results.html.jinja", exact_match=exact_match)
+    return render_template(
+        "results.html.jinja",
+        exact_match=exact_match,
+    )
 
 
 @app.route("/results")

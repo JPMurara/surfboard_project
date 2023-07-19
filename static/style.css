@@ -1,0 +1,77 @@
+body {
+  display: grid;
+  grid-template-rows: 0.1fr 0.1fr 1fr 1fr 1fr;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Lumanosimo", cursive;
+  background-color: #219ebc;
+  color: white;
+}
+
+.navbar-list {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-list a {
+  margin-right: 50px;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-list a:last-child {
+  margin-right: 0px;
+}
+
+.navbar-login {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-login button {
+  margin-left: 10px;
+  font-family: "Lumanosimo", cursive;
+  background-color: #e76f51;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-login button:last-child {
+  margin-right: 35px;
+}
+
+.banner-intro {
+  background-color: #219ebc;
+  color: white;
+  font-family: "Lumanosimo", cursive;
+}
+
+/* .carousel {
+  display: flex;
+  overflow: hidden;
+  width: 300px; /* Adjust the width to your desired size */
+/* height: 200px; Adjust the height to your desired size */
+/* } */
+
+/* .slide {
+  width: 100%;
+  height: 100%;
+  animation: carouselAnimation 9s infinite;
+} */
+
+/* @keyframes carouselAnimation {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  66.67% {
+    transform: translateX(-200%);
+  }
+} */

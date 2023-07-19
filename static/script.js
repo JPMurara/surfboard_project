@@ -11,3 +11,14 @@ function removeEl(e) {
   const surfboardContainer = btnClicked.parentElement;
   surfboardContainer.remove();
 }
+
+const loginBtn = document.getElementById("login-btn");
+loginBtn.addEventListener("click", loginRoute);
+
+function loginRoute() {
+  window.location.href = "/login";
+}
+
+function addRoute() {
+  window.location.href = "/add";
+}

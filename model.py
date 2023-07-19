@@ -45,6 +45,7 @@ def search(min_wave_size, max_wave_size, wave_type, break_type, skill_level):
         [min_wave_size, max_wave_size, wave_type, break_type, skill_level],
     )
     exact_match = cur.fetchall()
+
     close(conn, cur)
     return exact_match
 
