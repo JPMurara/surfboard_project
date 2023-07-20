@@ -32,33 +32,33 @@ INSERT INTO stores (store_name, url, post_code) VALUES (
     4567
 );
 
--- INSERT INTO shapers (shaper_name, email, shaper_url, is_admin, password_hash) VALUES 
--- (
---     'JS Industries',
---     'jsindustries@email.com',
---     'https://jsindustries.com/',
---     true,
---     'password_test'
--- ),
--- (
---     'Channel Island',
---     'allmerick@email.com',
---     'https://shop-au.cisurfboards.com/',
---     true,
---     'password_test'
--- ),
--- (
---     'Pyzel Surfboards',
---     'pyzel@email.com',
---     'https://pyzelsurf.com.au/',
---     true,
---     'password_test'
--- );
+INSERT INTO shapers (shaper_name, email, shaper_url, is_admin, password_hash) VALUES 
+(
+    'JS Industries',
+    'jsindustries@email.com',
+    'https://jsindustries.com/',
+    true,
+    '$2b$12$OmTq570um1dWRuKzmAKzJ.iT.GIc9BxBad/DwSDCiRLxQXb9tUxF.'
+),
+(
+    'Channel Island',
+    'allmerick@email.com',
+    'https://shop-au.cisurfboards.com/',
+    true,
+    '$2b$12$LGGcKYKIryGNW4d6vYgoTeZkrPMHskYYaA1ZnTpYDJExvKHO3YEjO'
+),
+(
+    'Pyzel Surfboards',
+    'pyzel@email.com',
+    'https://pyzelsurf.com.au/',
+    true,
+    '$2b$12$NaNdltnlnV/svo9ki9.I7ejrmsSwq1Hm9cjLEsNZgfp0dwh5SOLvS'
+);
 
 
 INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wave_size, wave_type, break_type, skill_level, img_single, img_detail, surfboard_url) VALUES 
 (
-    10,
+    1,
     'Forget Me Not 3 Step Up',
     'Step Up / Semi Gun',
     8,
@@ -71,7 +71,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://jsindustries.com/products/copy-of-forget-me-not-ii-step-up'
 ),
 (
-    10,
+    1,
     'Schooner',
     'Step Up / Semi Gun',
     6,
@@ -84,7 +84,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://jsindustries.com/products/schooner'
 ),
 (
-    10,
+    1,
     'Forget Me Not 3',
     'High Performance',
     4,
@@ -97,7 +97,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://jsindustries.com/products/forget-me-not-3'
 ),
 (
-    10,
+    1,
     'Monsta 10',
     'High Performance',
     3,
@@ -110,7 +110,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://jsindustries.com/products/monsta-10-easy-rider'
 ),
 (
-    10,
+    1,
     'Black Baron',
     'Groveler',
     2,
@@ -123,7 +123,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://jsindustries.com/products/black-baron'
 ),
 (   
-    10,
+    1,
     'Sub Xero',
     'Groveler',
     2,
@@ -136,7 +136,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://jsindustries.com/products/sub-xero'
 ),
 (
-    10,
+    1,
     'Xero',
     'Daily Driver',
     2,
@@ -149,7 +149,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://jsindustries.com/products/xero'
 ),
 (
-    10,
+    1,
     'Ranging Bull',
     'Daily Driver',
     2,
@@ -162,7 +162,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://jsindustries.com/products/raging-bull'
 ),
 (
-    20,
+    2,
     'Happy Traveller',
     'Step Up / Semi Gun',
     6,
@@ -175,7 +175,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://shop-au.cisurfboards.com/products/happy-traveler-1'
 ),
 (
-    20,
+    2,
     'Taco Grinder',
     'Step Up / Semi Gun',
     8,
@@ -188,7 +188,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://shop-au.cisurfboards.com/products/taco-grinder-1'
 ),
 (
-    20,
+    2,
     'Rook 15',
     'High Performance',
     5,
@@ -201,7 +201,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://shop-au.cisurfboards.com/products/rook-15'
 ),
 (
-    20,
+    2,
     'CI Pro',
     'High Performance',
     4,
@@ -214,7 +214,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://cisurfboards.com/products/ci-pro'
 ),
 (
-    20,
+    2,
     'Biscuit Bonzer',
     'Groveler',
     2,
@@ -227,7 +227,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://cisurfboards.com/products/biscuit-bonzer'
 ),
 (
-    20,
+    2,
     'Weirdo Ripper',
     'Groveler',
     3,
@@ -240,7 +240,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://cisurfboards.com/products/weirdo-ripper'
 ),
 (
-    20,
+    2,
     'Rocket Wide',
     'Daily Driver',
     3,
@@ -253,7 +253,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://cisurfboards.com/products/rocket-wide'
 ),
 (
-    20,
+    2,
     'OG Flyer',
     'Daily Driver',
     3,
@@ -266,7 +266,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://cisurfboards.com/products/og-flyer'
 ),
 (
-    30,
+    3,
     'Ghost',
     'Step Up / Semi Gun',
     5,
@@ -279,7 +279,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://pyzelsurf.com.au/products/ghost'
 ),
 (
-    30,
+    3,
     'Tank',
     'Step Up / Semi Gun',
     8,
@@ -292,7 +292,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://pyzelsurf.com.au/products/tank'
 ),
 (
-    30,
+    3,
     'Shadow',
     'High Performance',
     4,
@@ -305,7 +305,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://pyzelsurf.com.au/products/theshadow'
 ),
 (
-    30,
+    3,
     'Radius',
     'High Performance',
     3,
@@ -318,7 +318,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://pyzelsurf.com.au/products/radius'
 ),
 (
-    30,
+    3,
     'Gremlin',
     'Groveler',
     2,
@@ -331,7 +331,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://pyzelsurf.com.au/products/gremlin'
 ),
 (
-    30,
+    3,
     'Astro Pop',
     'Groveler',
     2,
@@ -344,7 +344,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://pyzelsurf.com.au/products/astropop'
 ),
 (
-    30,
+    3,
     'Pyzalien',
     'Daily Driver',
     3,
@@ -357,7 +357,7 @@ INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wa
     'https://pyzelsurf.com.au/products/pyzalien'
 ),
 (
-    30,
+    3,
     'Phantom',
     'Daily Driver',
     3,
