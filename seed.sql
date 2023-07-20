@@ -32,28 +32,28 @@ INSERT INTO stores (store_name, url, post_code) VALUES (
     4567
 );
 
-INSERT INTO shapers (shaper_name, email, shaper_url, is_admin, password_hash) VALUES 
-(
-    'JS Industries',
-    'jsindustries@email.com',
-    'https://jsindustries.com/',
-    true,
-    'password_test'
-),
-(
-    'Channel Island',
-    'allmerick@email.com',
-    'https://shop-au.cisurfboards.com/',
-    true,
-    'password_test'
-),
-(
-    'Pyzel Surfboards',
-    'pyzel@email.com',
-    'https://pyzelsurf.com.au/',
-    true,
-    'password_test'
-);
+-- INSERT INTO shapers (shaper_name, email, shaper_url, is_admin, password_hash) VALUES 
+-- (
+--     'JS Industries',
+--     'jsindustries@email.com',
+--     'https://jsindustries.com/',
+--     true,
+--     'password_test'
+-- ),
+-- (
+--     'Channel Island',
+--     'allmerick@email.com',
+--     'https://shop-au.cisurfboards.com/',
+--     true,
+--     'password_test'
+-- ),
+-- (
+--     'Pyzel Surfboards',
+--     'pyzel@email.com',
+--     'https://pyzelsurf.com.au/',
+--     true,
+--     'password_test'
+-- );
 
 
 INSERT INTO surfboards (shaper_id, model_name, model_type, min_wave_size, max_wave_size, wave_type, break_type, skill_level, img_single, img_detail, surfboard_url) VALUES 

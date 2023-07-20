@@ -103,9 +103,9 @@ def add_surfboard(
     close(conn, cur)
 
 
-if __name__ == "__main__":
-    # executes these func only when we can call the file directly: python3 model.py. Not when its imported as a module
-    conn, cur = connect()
-    create_tables("schema.sql")
-    insert("seed.sql")
-    close(conn, cur)
+# if __name__ == "__main__":
+#     # executes these func only when we can call the file directly: python3 model.py. Not when its imported as a module
+#     conn, cur = connect()
+#     create_tables("schema.sql")
+#     insert("seed.sql")
+#     close(conn, cur)
