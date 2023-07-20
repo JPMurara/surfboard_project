@@ -74,7 +74,6 @@ def insert_password(password_hash):
     conn.commit()
     close(conn, cur)
 
-insert_password(password_hash)
 
 def insert(sql_file):
     with open(sql_file, "r") as file:
@@ -84,8 +83,9 @@ def insert(sql_file):
         cur.execute(queries)
         conn.commit()
 
-
+if __name__ == "__main__":
         conn, cur = connect()
         create_tables("schema.sql")
+        insert_password(password_hash)
         insert("seed.sql")
         close(conn, cur)
