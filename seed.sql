@@ -32,7 +32,7 @@ INSERT INTO stores (store_name, url, post_code) VALUES (
     4567
 );
 
-INSERT INTO shapers (shaper_name, email, url, is_admin, password_hash) VALUES 
+INSERT INTO shapers (shaper_name, email, shaper_url, is_admin, password_hash) VALUES 
 (
     'JS Industries',
     'jsindustries@email.com',
