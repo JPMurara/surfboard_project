@@ -5,7 +5,7 @@ from psycopg2.extras import DictCursor
 def connect():
     # conn = psycopg2.connect("dbname=surfboard_db")
     conn = psycopg2.connect(
-    host='localhost',
+    host='dpg-cintu85gkuvudi85lii0-a',
     port=5432,
     dbname='surfboard_project',
     user='surfboard_project_user',
