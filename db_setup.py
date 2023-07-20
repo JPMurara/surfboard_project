@@ -1,25 +1,39 @@
-# import psycopg2
-# from psycopg2.extras import DictCursor
+
+
+import psycopg2
+from psycopg2.extras import DictCursor
 # import bcrypt
 
 
-# def connect():
-#     # conn = psycopg2.connect("dbname=surfboard_db")
-#     conn = psycopg2.connect(
-#     host='dpg-cintu85gkuvudi85lii0-a',
-#     port=5432,
-#     dbname='surfboard_project',
-#     user='surfboard_project_user',
-#     password='Kl4A5PcUULa4dyy1FrnOBwygs1PFb8Xm',
-# )
-#     cur = conn.cursor(cursor_factory=DictCursor)
-#     return conn, cur
 
 
-# def close(conn, cur):
-#     cur.close()
-#     conn.close()
+def connect():
+    # conn = psycopg2.connect("dbname=surfboard_db")
+    conn = psycopg2.connect(
+    host='dpg-cintu85gkuvudi85lii0-a',
+    port=5432,
+    dbname='surfboard_project',
+    user='surfboard_project_user',
+    password='Kl4A5PcUULa4dyy1FrnOBwygs1PFb8Xm',
+)
+    cur = conn.cursor(cursor_factory=DictCursor)
+    return conn, cur
 
+
+def close(conn, cur):
+    cur.close()
+    conn.close()
+
+def drop_db():
+    conn, cur = connect()
+    cur.execute("DROP TABLE surfboards")
+    conn.commit()
+    
+    cur.execute("DROP TABLE shapers")
+    conn.commit()
+    
+    cur.execute("DROP TABLE stores")
+    conn.commit()
 
 # def create_tables(sql_file):
 #     with open(sql_file, "r") as file:
