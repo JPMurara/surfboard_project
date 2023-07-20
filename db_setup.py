@@ -50,7 +50,7 @@ def insert_password(password_hash):
         'JS Industries',
         'jsindustries@email.com',
         'https://jsindustries.com/',
-        True,
+        False,
         password_hash
     )
         )
