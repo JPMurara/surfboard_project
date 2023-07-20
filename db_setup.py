@@ -46,7 +46,7 @@ def insert_password(password_hash):
     cur.execute(
     "INSERT INTO shapers (id, shaper_name, email, shaper_url, is_admin, password_hash) VALUES (%s, %s, %s, %s, %s, %s)",
     (
-        10,
+        1,
         'JS Industries',
         'jsindustries@email.com',
         'https://jsindustries.com/',
@@ -59,7 +59,7 @@ def insert_password(password_hash):
     cur.execute(
         "INSERT INTO shapers (id, shaper_name, email, shaper_url, is_admin, password_hash) VALUES (%s, %s, %s, %s, %s, %s)",
     (
-        20,
+        2,
         'Channel Island',
         'allmerick@email.com',
         'https://shop-au.cisurfboards.com/',
@@ -72,7 +72,7 @@ def insert_password(password_hash):
     cur.execute(
         "INSERT INTO shapers (id, shaper_name, email, shaper_url, is_admin, password_hash) VALUES (%s, %s, %s, %s, %s, %s)",
         (
-        30,
+        3,
         'Pyzel Surfboards',
         'pyzel@email.com',
         'https://pyzelsurf.com.au/',
