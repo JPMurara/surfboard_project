@@ -37,51 +37,51 @@ def create_tables(sql_file):
         conn.commit()
 
 
-# password = "test"
-# binary_password = bcrypt.hashpw(password.encode(), bcrypt.gensalt())
-# password_hash = binary_password.decode()
+password = "test"
+binary_password = bcrypt.hashpw(password.encode(), bcrypt.gensalt())
+password_hash = binary_password.decode()
 
-# def insert_password(password_hash):
-#     conn, cur = connect()
-#     cur.execute(
-#     "INSERT INTO shapers (id, shaper_name, email, shaper_url, is_admin, password_hash) VALUES (%s, %s, %s, %s, %s, %s)",
-#     (
-#         10,
-#         'JS Industries',
-#         'jsindustries@email.com',
-#         'https://jsindustries.com/',
-#         True,
-#         password_hash
-#     )
-#         )
-#     conn.commit()
+def insert_password(password_hash):
+    conn, cur = connect()
+    cur.execute(
+    "INSERT INTO shapers (id, shaper_name, email, shaper_url, is_admin, password_hash) VALUES (%s, %s, %s, %s, %s, %s)",
+    (
+        10,
+        'JS Industries',
+        'jsindustries@email.com',
+        'https://jsindustries.com/',
+        True,
+        password_hash
+    )
+        )
+    conn.commit()
     
-#     cur.execute(
-#         "INSERT INTO shapers (id, shaper_name, email, shaper_url, is_admin, password_hash) VALUES (%s, %s, %s, %s, %s, %s)",
-#     (
-#         20,
-#         'Channel Island',
-#         'allmerick@email.com',
-#         'https://shop-au.cisurfboards.com/',
-#         True,
-#         password_hash
-#     )
-#         )
-#     conn.commit()
+    cur.execute(
+        "INSERT INTO shapers (id, shaper_name, email, shaper_url, is_admin, password_hash) VALUES (%s, %s, %s, %s, %s, %s)",
+    (
+        20,
+        'Channel Island',
+        'allmerick@email.com',
+        'https://shop-au.cisurfboards.com/',
+        True,
+        password_hash
+    )
+        )
+    conn.commit()
 
-#     cur.execute(
-#         "INSERT INTO shapers (id, shaper_name, email, shaper_url, is_admin, password_hash) VALUES (%s, %s, %s, %s, %s, %s)",
-#         (
-#         30,
-#         'Pyzel Surfboards',
-#         'pyzel@email.com',
-#         'https://pyzelsurf.com.au/',
-#         True,
-#         password_hash
-#     )
-#         )
-#     conn.commit()
-#     close(conn, cur)
+    cur.execute(
+        "INSERT INTO shapers (id, shaper_name, email, shaper_url, is_admin, password_hash) VALUES (%s, %s, %s, %s, %s, %s)",
+        (
+        30,
+        'Pyzel Surfboards',
+        'pyzel@email.com',
+        'https://pyzelsurf.com.au/',
+        True,
+        password_hash
+    )
+        )
+    conn.commit()
+    close(conn, cur)
 
 
 def insert(sql_file):
@@ -96,6 +96,6 @@ if __name__ == "__main__":
         conn, cur = connect()
         drop_tables()
         create_tables("schema.sql")
-        # insert_password(password_hash)
+        insert_password(password_hash)
         insert("seed.sql")
         close(conn, cur)
