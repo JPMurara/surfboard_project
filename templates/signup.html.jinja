@@ -7,40 +7,56 @@
     {% include "css-link.html.jinja" %}
 </head>
 <body>
+
+{% include "navbar.html.jinja" %}
+
+<section class="banner-intro">
     <h1>Admin Sign Up Page</h1>
     <p>If you are a shaper and want to add your surfboard to our database, please submit the form</p>
-    
-    <form action="/register_action" method="POST">
-    <label for="shaper-name">Company Name</label>
-    <input type="text" name="shaper-name" id="shaper-name" required>
+</section> 
+ 
+<section class="form-container">
+<section class="form-title">
+    <img id="shaper-img" src="https://images.unsplash.com/photo-1625692214525-d63b1e0d0ca6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3VyZmJvYXJkJTIwc2hhcGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="">
+</section>
 
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" required>
+    <form id="register-form" class="form-container" action="/register_action" method="POST">
+      <div>
+        <label for="shaper-name">Company Name</label>
+        <input type="text" name="shaper-name" id="shaper-name" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+      <div>
+        <label for="shaper-url">Company Website</label>
+        <input type="text" name="shaper-url" id="shaper-url" required>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+      </div>
+      <div>
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" name="confirm-password" id="confirm-password" required>
+      </div>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <div class="flash-messages">
+        {% for message in messages %}
+          <p class="flash-message">{{ message }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endwith %}
 
-    <label for="shaper-url">Company Website</label>
-    <input type="text" name="shaper-url" id="shaper-url" required>
+      <button class="button">Register</button>
 
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required>
-
-    <label for="confirm-password">Confirm Password</label>
-    <input type="password" name="confirm-password" id="confirm-password" required>
-
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <div class="flash-messages">
-      {% for message in messages %}
-        <p class="flash-message">{{ message }}</p>
-      {% endfor %}
-    </div>
-    {% endif %}
-    {% endwith %}
-
-    <button>Register</button>
-
-    <div class="message-container"></div>
+    {# <div class="message-container"></div> #}
 </form>
+</section>
 
-<script src="../static/script.js"></script>
+{% include "footer.html.jinja" %}
 </body>
 </html>

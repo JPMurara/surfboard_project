@@ -3,14 +3,14 @@ from psycopg2.extras import DictCursor
 
 
 def connect():
-    # conn = psycopg2.connect("dbname=surfboard_db")
-    conn = psycopg2.connect(
-    host='dpg-cintu85gkuvudi85lii0-a',
-    port=5432,
-    dbname='surfboard_project',
-    user='surfboard_project_user',
-    password='Kl4A5PcUULa4dyy1FrnOBwygs1PFb8Xm',
-)
+    conn = psycopg2.connect("dbname=surfboard_db")
+    # conn = psycopg2.connect(
+    # host='dpg-cintu85gkuvudi85lii0-a',
+    # port=5432,
+    # dbname='surfboard_project',
+    # user='surfboard_project_user',
+    # password='Kl4A5PcUULa4dyy1FrnOBwygs1PFb8Xm',
+# )
     cur = conn.cursor(cursor_factory=DictCursor)
     return conn, cur
 
@@ -53,6 +53,13 @@ def search(min_wave_size, max_wave_size, wave_type, break_type, skill_level):
         [min_wave_size, max_wave_size, wave_type, break_type, skill_level],
     )
     exact_match = cur.fetchall()
+
+    for index, surfboard in enumerate(exact_match):
+        exact_match[index]["model_name"] = surfboard["model_name"].title()
+        exact_match[index]["model_type"] = surfboard["model_type"].title()
+        exact_match[index]["wave_type"] = surfboard["wave_type"].title()
+        exact_match[index]["break_type"] = surfboard["break_type"].title()
+        exact_match[index]["skill_level"] = surfboard["skill_level"].title()
 
     close(conn, cur)
     return exact_match

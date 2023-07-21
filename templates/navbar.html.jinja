@@ -10,14 +10,14 @@
         <p>Logged in as {{session.user.name}}</p>
         {% if session.user and session.user.is_admin == True %}
             {# <a href="/add">Add New Surfboard</a> DELETE IF THE BUTTON IS WORKING FINE#}
-            <button id="add-btn" onclick="addRoute()">Add New Surfboard</button>
+            <button class="button" id="add-btn" onclick="addRoute()">Add New Surfboard</button>
         {% endif %}
         <form action="/logout" method="POST">
-        <button>Logout</button>
+        <button class="button">Logout</button>
         </form>
     {% else %}
         {# <a href="/login">Shaper Login</a> DELETE IF THE BUTTON IS WORKING FINE#}
-        <button id="login-btn">Shaper Login</button>
+        <button id="login-btn" class="button">Shaper Login</button>
     {% endif %}
     </div>
 

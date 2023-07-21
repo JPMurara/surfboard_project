@@ -140,6 +140,9 @@ def add_action():
     )
     return redirect("/")
 
+@app.route("/about")
+def about():
+    return render_template("about.html.jinja")
 
 if __name__ == "__main__":
     app.run(debug=True, port=os.getenv("PORT", default=5000))

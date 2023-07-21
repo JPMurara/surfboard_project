@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Surfboard Selector - About</title>
+    {% include "css-link.html.jinja" %}
+</head>
+<body>
+    {% include "navbar.html.jinja" %}
+
+    <section class="banner-intro">
+        <h1 id="login-page-title">The Surfboard Selector Project</h1>
+    </section>
+
+    <section class="about-text">
+    
+    <h2>Why this project?</h2>
+    <p>When I started surfing ages ago it wasn't easy to find a good surfboard that fit my personal needs, physical aptitude and surfing skills. I ended up buying some wrong models for myself and getting disappointed on that before being able to make the right choice.</p>
+    <p>There are many shapers who offer dozens of surfboards in their websites. So I basically had to access each of them and browse every surfboard and try to compare while being overwhelmed with lots of options. But which one was a good choice?</p>
+    <p>Well, surfing dependns on the surboard hydrodinamics, performance in different sea conditions, different wave characteristics, surfing skills, etc...</p>
+    <p>Since I am super curious and love to know how things works, I started to study about how the surfboard is made and their different characteristics. I found it super interesting and became a surfboard addicted. I love buying different surfboard models and test them in different waves conditions to see how they go.</p>
+    <p>Now with a comprehensive surfboard knowledge is quite easy for me to pick the right model for myself. But what about for other people?</p>
+    <p>As a person who loves helpig others and making people's life easier, I decided to build the Surfboard Selector Project.</p>
+
+    <h2>Who can use this website?</h2>
+    <p>People who come to my website are sick of accessing many different surfboard's brands and getting overwhelmed with so may option out there. If they dont have a good knowledge about surfboard hydrodinamics, surfboard dimensions and attributes, etc...they wont be able to pick the right one...and will get frustrated.</p>
+    <p>In my website, people have access to a surfboard DB of the best sshapers in the world! They are able to tailor search based on their profile, check each model's information and characteristics, watch review videos and contact their local surf shop to buy their next magic board!</p>
+    <p>Shapers can register to add their new surfboards into our DB and make it avaiable on the search for surfers who are looking for a new surfboard or just browsing what's new in the market</p>
+
+    <h2>How it works?</h2>
+    <p>Users need submit some information via a form in the home page with their surfing skills and the wave characteristics.</p>
+    <p>The search form triggers a query in the DB to retrieve data that matches with the user's search</p>
+    <p>Results are displayed in the results route</p>
+    <p>The user can compare the surfboards models, access further details in the shaper's website or remove the option from their list</p>
+    <p>Shapers can register in the website to be able to insert new surfboard models in the DB when submitting a form</p>
+    <p>The form triggers a function that inserts data in the surfboards table</p>
+    <p>Only shapers who have the specific permission are able to access the add route and insert their surfboards into the DB</p>
+
+    <h2>Technologies involed</h2>
+    <ul>
+        <li>JS</li>
+        <li>HTML, CSS</li>
+        <li>Python, Flask, Psycopg2</li>
+        <li>Postgres</li>
+    </ul>
+
+    <h2>Next steps and refactoring</h2>
+        <ul>
+        <li>AI assistant chat</li>
+        <li>Location API to show store locations to users</li>
+        <li>Add product details where it brings together detailed info about the surfboard and professional surfers videos review about the surfboard</li>
+        <li>Product comments section where users can interact with shapers to ask questions about the surfboard</li>
+        <li>Product review section where users can rate surfboard</li>
+        <li>Refactor the back end using Node.js with Express</li>
+        <li>Refactor the front end using React and Material UI</li>
+        </ul>
+
+    </section>
+
+    {% include "footer.html.jinja" %}
+</body>
+</html>
