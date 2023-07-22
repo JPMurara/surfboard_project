@@ -3,8 +3,13 @@ const loginBtn = document.getElementById("login-btn");
 const registerBtn = document.getElementById("register-btn");
 const detailsBtn = document.getElementsByClassName("details-btn");
 
-loginBtn.addEventListener("click", loginRoute);
-registerBtn.addEventListener("click", registerRoute);
+if (loginBtn) {
+  loginBtn.addEventListener("click", loginRoute);
+}
+
+if (registerBtn) {
+  registerBtn.addEventListener("click", registerRoute);
+}
 
 for (btn of detailsBtn) {
   btn.addEventListener("click", surfboardDetails);
