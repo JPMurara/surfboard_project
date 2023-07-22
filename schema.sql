@@ -1,4 +1,3 @@
--- PGPASSWORD=Kl4A5PcUULa4dyy1FrnOBwygs1PFb8Xm psql -h dpg-cintu85gkuvudi85lii0-a.singapore-postgres.render.com -U surfboard_project_user surfboard_project < schema.sql
 
 CREATE TABLE IF NOT EXISTS shapers (
     id serial PRIMARY KEY,
@@ -16,12 +15,6 @@ CREATE TABLE IF NOT EXISTS stores (
     post_code INT NOT NULL
 );			
 		
--- CREATE TABLE IF NOT EXISTS shapers (
---     id serial PRIMARY KEY,
---     shaper_name TEXT NOT NULL UNIQUE,
---     url TEXT NOT NULL
--- );
-
 CREATE TABLE IF NOT EXISTS surfboards (
     id serial PRIMARY KEY,
     shaper_id INT,

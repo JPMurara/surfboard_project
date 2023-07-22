@@ -1,3 +1,4 @@
+# This file is only executed when deplying on render.com
 # import psycopg2
 # from psycopg2.extras import DictCursor
 # import bcrypt
