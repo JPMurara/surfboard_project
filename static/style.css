@@ -138,10 +138,6 @@ body {
   display: flex;
 }
 
-/* .search-form > section {
-  flex-basis: calc(33.33% - 10px);
-} */
-
 .wave-size {
   display: flex;
   padding-top: 10px;
@@ -163,7 +159,7 @@ body {
 
 .wave-type {
   display: flex;
-  justify-content: space;
+  justify-content: space-between;
 }
 
 .search-form select {
@@ -227,7 +223,6 @@ body {
 
 .results-column {
   font-weight: bold;
-  /* border: 1px solid #dddddd; */
   text-align: center;
   padding: 8px;
   min-width: 100px;
@@ -256,4 +251,19 @@ body {
 
 .about-text {
   background-color: #d4a373;
+}
+
+.add-form {
+  flex: 3;
+  padding-left: 10px;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: first baseline;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.add-form div,
+button {
+  margin: 10px 0 10px 30px;
 }

@@ -4,7 +4,7 @@ const registerBtn = document.getElementById("register-btn");
 const detailsBtn = document.getElementsByClassName("details-btn");
 
 loginBtn.addEventListener("click", loginRoute);
-// registerBtn.addEventListener("click", registerRoute);
+registerBtn.addEventListener("click", registerRoute);
 
 for (btn of detailsBtn) {
   btn.addEventListener("click", surfboardDetails);

@@ -9,63 +9,90 @@
 <body>
     {% include "navbar.html.jinja" %}
 
-    <form action="/add_action" method="POST">
+    <section class="banner-intro">
+        <h1 id="login-page-title">Shaper's Area</h1>
+        <p>Add your new surfboard into our database</p>
+    </section>
+    
+    <section class="form-container">
+        <form class="add-form" action="/add_action" method="POST">
 
-        <label for="model-name">Model Name</label>
-        <input type="text" name="model-name" id="model-name">
+            <div>
+                <label for="model-name">Model Name</label>
+                <input type="text" name="model-name" id="model-name" required>
+            </div>
 
-        <label for="model-type">Model Type</label>
-        <select name="model-type" id="model-type">
-            <option value="">...</option>
-            <option value="Step Up / Semi Gun">Step Up / Semi Gun</option>
-            <option value="High Performance">High Performance</option>
-            <option value="Groveler">Groveler</option>
-            <option value="Daily Driver">Daily Driver</option>
-        </select>
-   
-        <label for="min-wave-size" >Min wave feet?</label>
-        <input type="number" name="min-wave-size" id="min-wave-size">
+            <div>
+                <label for="model-type">Model Type</label>
+                <select name="model-type" id="model-type" required>
+                    <option value="">...</option>
+                    <option value="Step Up / Semi Gun">Step Up / Semi Gun</option>
+                    <option value="High Performance">High Performance</option>
+                    <option value="Groveler">Groveler</option>
+                    <option value="Daily Driver">Daily Driver</option>
+                </select>
+            </div>
 
-        <label for="max-wave-size">And the max feet?</label>
-        <input type="number" name="max-wave-size" id="max-wave-size">
+            <div>
+                <label for="min-wave-size" >Min wave feet?</label>
+                <input type="number" name="min-wave-size" id="min-wave-size" required>
+            </div>
 
-        <label for="wave-type">Wave Type</label>
-        <select id="wave-type" name="wave-type">
-            <option value="">...</option>
-            <option value="mushy">Mushy - Full - Weak</option>
-            <option value="all">All Conditions - Daily Driver</option>
-            <option value="powerful">Powerful Waves</option>
-            <option value="big wave">Big Waves</option>
-        </select>
+            <div>
+                <label for="max-wave-size">And the max feet?</label>
+                <input type="number" name="max-wave-size" id="max-wave-size" required>
+            </div>
 
-        <label for="break-type">Break Type</label>
-        <select name="break-type" id="break-type">
-            <option value="">...</option>
-            <option value="beach">Beach break</option>
-            <option value="point">Point break</option>
-            <option value="reef">Reef - Slabs</option>
-            <option value="all">All Breaks</option>
-        </select>
+            <div>
+                <label for="wave-type">Wave Type</label>
+                <select id="wave-type" name="wave-type" required>
+                    <option value="">...</option>
+                    <option value="mushy">Mushy - Full - Weak</option>
+                    <option value="all">All Conditions - Daily Driver</option>
+                    <option value="powerful">Powerful Waves</option>
+                    <option value="big wave">Big Waves</option>
+                </select>
+            </div>
 
-        <label for="skill-level">Surfer Skills Level?</label>
-        <select name="skill-level" id="skill-level">
-            <option value="">...</option>
-            <option value="beginner">Beginner / Low Experienced</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="expert">Expert</option>
-        </select>
+            <div>
+                <label for="break-type">Break Type</label>
+                <select name="break-type" id="break-type" required>
+                    <option value="">...</option>
+                    <option value="beach">Beach break</option>
+                    <option value="point">Point break</option>
+                    <option value="reef">Reef - Slabs</option>
+                    <option value="all">All Breaks</option>
+                </select>
+            </div>
 
-        <label for="img-single">Main Image</label>
-        <input type="text" name="img-single" id="img-single">
+            <div>
+                <label for="skill-level">Surfer Skills Level?</label>
+                <select name="skill-level" id="skill-level" required>
+                    <option value="">...</option>
+                    <option value="beginner">Beginner / Low Experienced</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="expert">Expert</option>
+                </select>
+            </div>
 
-        <label for="img-detail">Secondary Image</label>
-        <input type="text" name="img-detail" id="img-detail">
+            <div>
+                <label for="img-single">Main Image</label>
+                <input type="text" name="img-single" id="img-single" required>
+            </div>
 
-        <label for="surfboard-url">Surfboard URL</label>
-        <input type="text" name="surfboard-url" id="surfboard-url">
+            <div>
+                <label for="img-detail">Secondary Image</label>
+                <input type="text" name="img-detail" id="img-detail">
+            </div>
 
-        <button>Add New Surfboard</button>
-    </form>
+            <div>
+                <label for="surfboard-url">Surfboard URL</label>
+                <input type="text" name="surfboard-url" id="surfboard-url">
+            </div>
+            
+            <button class="button">Add New Surfboard</button>
+        </form>
+    </section>
 
     {% include "footer.html.jinja" %}
 </body>
