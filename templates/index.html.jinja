@@ -15,28 +15,27 @@
     <p>The first website that helps you to choose your next magic board</p>
     </section>
 
-  <section class="images">
-    <img src="https://jsindustries.com/cdn/shop/files/jslogo_1.webp?v=1663133517" alt="">
-    <img src="https://pyzelsurf.com.au/cdn/shop/files/logo_pyzel_3x_50508218-140a-4408-acb7-d79016bbee09_300x.png?v=1641532942" alt="">
-    <img src="https://www.cleanlinesurf.com/media/images/surfboard_brand_icons/logo-channel-islands-surfboards-200px.png" alt="">
-  </section>
+    <section class="images">
+      <img src="https://jsindustries.com/cdn/shop/files/jslogo_1.webp?v=1663133517" alt="">
+      <img src="https://pyzelsurf.com.au/cdn/shop/files/logo_pyzel_3x_50508218-140a-4408-acb7-d79016bbee09_300x.png?v=1641532942" alt="">
+      <img src="https://www.cleanlinesurf.com/media/images/surfboard_brand_icons/logo-channel-islands-surfboards-200px.png" alt="">
+    </section>
 
-  <section class="form-container">
-    <div class="form-title">
-      <p>Find Your New Surfboard</p>
-    </div>
-    <form class="search-form" action="/search" method="GET">
-          <div class="wave-size">
-            <p>What's the wave size range in feet?</p>
-            <label for="min_wave_size">From</label>
-            <input type="number" name="min_wave_size" id="min_wave_size">
-            <label for="max_wave_size">To</label>
-            <input type="number" name="max_wave_size" id="max_wave_size">
-            
-          </div>
+    <section class="form-container">
+      <div class="form-title">
+        <p>Find Your New Surfboard</p>
+      </div>
+      <form class="search-form" action="/search" method="GET">
+        <div class="wave-size">
+          <p>What's the wave size range in feet?</p>
+          <label for="min_wave_size">From</label>
+          <input type="number" name="min_wave_size" id="min_wave_size">
+          <label for="max_wave_size">To</label>
+          <input type="number" name="max_wave_size" id="max_wave_size">
+        </div>
 
-          <div class="wave-type">
-            <label for="wave_type">What's the type of the wave?</label>
+        <div class="wave-type">
+          <label for="wave_type">What's the type of the wave?</label>
             <select id="wave_type" name="wave_type">
               <option value="">...</option>
               <option value="mushy">Mushy - Full - Weak</option>
@@ -44,33 +43,32 @@
               <option value="powerful">Powerful Waves</option>
               <option value="big wave">Big Waves</option>
             </select>
-            
-          </div>
+        </div>
 
-          <div class="break-type">
-            <label for="break_type">What's the break?</label>
-            <select name="break_type" id="break_type">
+        <div class="break-type">
+          <label for="break_type">What's the break?</label>
+          <select name="break_type" id="break_type">
+            <option value="">...</option>
+            <option value="beach">Beach break</option>
+            <option value="point">Point break</option>
+            <option value="reef">Reef - Slabs</option>
+            <option value="all">All Breaks</option>
+          </select>
+        </div>
+
+        <div class="skills">
+            <label for="skill_level">What's your skill level?</label>
+            <select name="skill_level" id="skill_level">
               <option value="">...</option>
-              <option value="beach">Beach break</option>
-              <option value="point">Point break</option>
-              <option value="reef">Reef - Slabs</option>
-              <option value="all">All Breaks</option>
+              <option value="beginner">Beginner / Low Experienced</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="expert">Expert</option>
             </select>
-          </div>
-
-          <div class="skills">
-              <label for="skill_level">What's your skill level?</label>
-              <select name="skill_level" id="skill_level">
-                <option value="">...</option>
-                <option value="beginner">Beginner / Low Experienced</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="expert">Expert</option>
-              </select>
-          </div>
+        </div>
 
         <button class="button">Search</button>
       </form>
-  </section>
+    </section>
 
     {% include "footer.html.jinja" %}
   </body>

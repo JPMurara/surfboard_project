@@ -7,26 +7,26 @@
     {% include "css-link.html.jinja" %}
 </head>
 <body>
-{% include "navbar.html.jinja" %}
+  {% include "navbar.html.jinja" %}
     
-<section class="banner-intro">
+  <section class="banner-intro">
     <h1>Some Magic Surfboards For You</h1>
-</section>
+  </section>
 
-<div class="results-container">
+  <div class="results-container">
 
-  <div class="results-row">
-    <div class="results-column">Brand</div>
-    <div class="results-column">Model</div>
-    <div class="results-column">Board Type</div>
-    <div class="results-column">Wave Range (ft)</div>
-    <div class="results-column">Wave Type</div>
-    <div class="results-column">Break Type</div>
-    <div class="results-column">Skill Level</div>
-    <div class="results-column"></div>
-    <div class="results-column"></div>
-    <div class="results-column"></div>
-  </div>
+    <div class="results-row">
+      <div class="results-column">Brand</div>
+      <div class="results-column">Model</div>
+      <div class="results-column">Board Type</div>
+      <div class="results-column">Wave Range (ft)</div>
+      <div class="results-column">Wave Type</div>
+      <div class="results-column">Break Type</div>
+      <div class="results-column">Skill Level</div>
+      <div class="results-column"></div>
+      <div class="results-column"></div>
+      <div class="results-column"></div>
+    </div>
 
     {% for surfboard in exact_match %}
     <div class="results-row grid-align">
@@ -34,7 +34,7 @@
       <div class="results-column" >{{surfboard.model_name}}</div>
       <div class="results-column" >{{surfboard.model_type}}</div>
       <div class="results-column" >
-        {{ surfboard.min_wave_size }} to {{ surfboard.max_wave_size }}
+      {{ surfboard.min_wave_size }} to {{ surfboard.max_wave_size }}
       </div>
       <div class="results-column" >{{surfboard.wave_type}}</div>
       <div class="results-column" >{{surfboard.break_type}}</div>
@@ -44,8 +44,8 @@
       {# <a  class="results-column" href="{{surfboard.surfboard_url}}" target="_blank">More details</a> #}
       <button  class="results-column button btn-remove">Remove</button>
     </div>
-  {% endfor %}
-  </div>
+    {% endfor %}
+    </div>
 
 {% include "footer.html.jinja" %}
 </body>

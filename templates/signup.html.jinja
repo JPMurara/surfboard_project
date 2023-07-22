@@ -8,17 +8,17 @@
 </head>
 <body>
 
-{% include "navbar.html.jinja" %}
+  {% include "navbar.html.jinja" %}
 
-<section class="banner-intro">
-    <h1>Admin Sign Up Page</h1>
-    <p>If you are a shaper and want to add your surfboard to our database, please submit the form</p>
-</section> 
- 
-<section class="form-container">
-<section class="form-title">
-    <img id="shaper-img" src="https://images.unsplash.com/photo-1625692214525-d63b1e0d0ca6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3VyZmJvYXJkJTIwc2hhcGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="">
-</section>
+  <section class="banner-intro">
+      <h1>Admin Sign Up Page</h1>
+      <p>If you are a shaper and want to add your surfboard to our database, please submit the form</p>
+  </section> 
+  
+  <section class="form-container">
+    <section class="form-title">
+        <img id="shaper-img" src="https://images.unsplash.com/photo-1625692214525-d63b1e0d0ca6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3VyZmJvYXJkJTIwc2hhcGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="">
+    </section>
 
     <form id="register-form" class="form-container" action="/register_action" method="POST">
       <div>
@@ -45,17 +45,16 @@
       {% if messages %}
       <div class="flash-messages">
         {% for message in messages %}
-          <p class="flash-message">{{ message }}</p>
+        <p class="flash-message">{{ message }}</p>
         {% endfor %}
       </div>
       {% endif %}
       {% endwith %}
 
       <button class="button">Register</button>
-
-    {# <div class="message-container"></div> #}
-</form>
-</section>
+      {# <div class="message-container"></div> #}
+    </form>
+  </section>
 
 {% include "footer.html.jinja" %}
 </body>
