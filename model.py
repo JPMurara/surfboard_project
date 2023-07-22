@@ -3,15 +3,15 @@ from psycopg2.extras import DictCursor
 
 
 def connect():
-    conn = psycopg2.connect("dbname=surfboard_db")
+    # conn = psycopg2.connect("dbname=surfboard_db")
     # code line below are used only when deploying in render.com
-    # conn = psycopg2.connect(
-    # host='dpg-cintu85gkuvudi85lii0-a',
-    # port=5432,
-    # dbname='surfboard_project',
-    # user='surfboard_project_user',
-    # password='Kl4A5PcUULa4dyy1FrnOBwygs1PFb8Xm',
-# )
+    conn = psycopg2.connect(
+    host='dpg-cintu85gkuvudi85lii0-a',
+    port=5432,
+    dbname='surfboard_project',
+    user='surfboard_project_user',
+    password='Kl4A5PcUULa4dyy1FrnOBwygs1PFb8Xm',
+)
     cur = conn.cursor(cursor_factory=DictCursor)
     return conn, cur
 
